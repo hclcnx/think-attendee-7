@@ -17,6 +17,17 @@
 //
 // ==/UserScript==
 
+var xhargs = {
+	url: "/connections/opensocial/rest/people/@me/@self",
+	handleAs: "json"
+};
+var deferred = dojo.xhrGet(xhrargs);
+deferred.then(
+	function(results) {
+		dojo.query("span.shareSome-title")[0].textContent="hello " + results.entry.displayName +"! ";
+	}
+};
+
 if(typeof(dojo) != "undefined") {
 	require(["dojo/domReady!"], function(){
         try {
