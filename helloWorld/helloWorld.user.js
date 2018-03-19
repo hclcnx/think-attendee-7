@@ -26,7 +26,7 @@ deferred.then(
 	function(results) {
 		dojo.query("span.shareSome-title")[0].textContent="hello " + results.entry.displayName +"! ";
 	}
-};
+);
 
 if(typeof(dojo) != "undefined") {
 	require(["dojo/domReady!"], function(){
