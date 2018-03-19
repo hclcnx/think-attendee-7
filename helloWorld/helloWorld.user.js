@@ -21,7 +21,7 @@ var xhargs = {
 	url: "/connections/opensocial/rest/people/@me/@self",
 	handleAs: "json"
 };
-var deferred = dojo.xhrGet(xhrargs);
+var deferred = dojo.xhrGet(xhargs);
 deferred.then(
 	function(results) {
 		dojo.query("span.shareSome-title")[0].textContent="hello " + results.entry.displayName +"! ";
